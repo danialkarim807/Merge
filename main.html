@@ -16,30 +16,3 @@
 </body>
 </html>
 
-<!-- 
-name: Merge Dev into Prod
-
-on:
-  push:
-    branches:
-      - dev
-
-jobs:
-  merge:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout PROD Branch
-      uses: actions/checkout@v3
-      with:
-        ref: PROD
-        submodules: 'recursive'
-        submodule-depth: 50
-
-    - name: Merge Dev into PROD
-      run: |
-        git merge dev
-        git push origin prod
-    - name: Clean up
-      run: |
-        git branch -d DEV -->
